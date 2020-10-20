@@ -1,150 +1,56 @@
-body
-{
-    margin: 0;
-    padding: 0;
-background: linear-gradient(90deg,#00076f ,#44008b,#9f45b0,#e54ed0,	#ffe4f2);
-width: 100%;
-min-height: 100vh;
-overflow: hidden;
-}
-section{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width:100% ;
-    height:100% ;
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-}
-section:before
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-top: 100vh solid transparent;
-    border-left: 100vh solid #ffffff;
-    opacity: 0.1;
-}
 
-section:after
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    right:0 ;
-    border-top: 100vh solid transparent;
-    border-right: 100vh solid #ffffff;
-    opacity: 0.1;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color:#000;
 }
-div{
-    position: absolute;
-    background: #fff;
-    transform-style: preserve-3d;
-    animation-name: animate ; 
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+li,a ,button{
+  font-family: "Montserrat",Sans-Serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #f5f5f5;
+  text-decoration: none;
 }
-div:nth-child(1){
-    left: 100px;
-    width:150px ;
-    height: 100px;
-    animation-duration:15s ;
+header{
+  display: flex;
+justify-content:space-between;
+align-items:center
+padding: 30px 10%;
+  
 }
-div:nth-child(2){
-    left: 300px;
-    width:80px ;        
-    height: 60px;
-    animation-duration:10s ;
-}
-div:nth-child(3){
-    left: 500px;
-    width:200px ;
-    height: 150px;
-    animation-duration:25s ;
-}
-div:nth-child(4){
-    left: 20px;
-    width:40px ;
-    height: 30px;
-    animation-duration:5s ;
-}
-div:nth-child(5){
-    right: 100px;
-    width:90px ;
-    height: 60px;
-    animation-duration:8s ;
-}
-div:nth-child(6){
-    right: 220px;
-    width:120px ;
-    height: 90px;
-    animation-duration:5s ;
-}
-div:nth-child(7){
-    right: 100px;
-    width:70px ;
-    height: 55px;
-    animation-duration:12s ;
-}
-div:nth-child(8){
-    left: 350px;
-    width:40px ;
-    height: 30px;
-    animation-duration:5s ;
-}
-div:before
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;   
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-}
-
-div:after
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;   
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    background: #e2e2e2;
-    transform: rotateY(90deg);
-}
-@keyframes animate
-{
-   0%
-   {
-       transform: rotateY(0 deg) translateY(110vh);
-   }
-   100%
-   {
-    transform: rotateY(360deg)translateY(-20vh);
-   }
+.logo{
+  cursor:pointer ;
+  
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.nav____links li{
+list-style: none;  
+  
+}
+.nav____links li a{
+  display: inline-block;
+  padding: 0px 20px;
+  
+}
+.nav____links li a:hover{
+  color: #0088a9;
+  
+}
+.cta{
+  
+  order:2;
+}
+button{
+  padding: 9px 25px;
+  background-color: rgba(0,136,169,1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition:all 0.3s ease 0s;
+}
+button:hover{
+  background-color: rgba(0,136,169,0.8);
+}
